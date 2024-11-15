@@ -1,0 +1,34 @@
+.form-actions-entries {
+    margin: 2em auto;
+    display: flex;
+    justify-content: center;
+
+    .ant-form-item-control-input-content {
+        margin-bottom: 1em;
+    }
+
+    .text-small {
+        font-size: 4px;
+    }
+}
+
+.ant-select-item-option-active {
+    background-color: #dfe7eb !important;
+    font-weight: 700;
+}
+
+.input-form:hover {
+    border-color: #800000;
+    border-right-width: 1px;
+}
+
+.input-form:focus {
+    border-color: #800000;
+    box-shadow: 0 0 0 2px rgba(243, 64, 9, 0.2);
+    border-right-width: 1px;
+    outline: 1;
+}
+
+.input-form::placeholder {
+    color: #800000;
+}

@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  postgresdb:
+    image: postgres:latest
+    container_name: mi_postgres
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-admin}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-admin123}
+      - POSTGRES_DB=${POSTGRES_DB:-mi_base}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      #- ./init.sql:/docker-entrypoint-initdb.d/facturacion_local.sql
+    restart: unless-stopped
+    networks:
+      - app-network
+
+
+  api: # Defines the 'api' service for the backend API
+    build: # Builds the backend API using the provided Dockerfile
+      context: ./backend # Specifies the build context directory for the backend
+      dockerfile: Dockerfile # Specifies the Dockerfile to use for building the backend
+    command: node index.js
+    environment:
+      - DB_HOST=postgresdb
+    networks:
+      - app-network
+    ports:
+      - 3000:3000 # Maps the container's port 3000 to the host's port 3000
+    depends_on:
+      - postgresdb # Specifies that the 'api' service depends on the 'db' service
+
+
+  frontend: # Defines the 'frontend' service for the frontend app
+    restart: on-failure # Restarts the container if it fails
+    build: # Builds the frontend app using the provided Dockerfile
+      context: ./frontend # Specifies the build context directory for the frontend
+    ports:
+      - 3030:3030 # Maps the container's port 3000 to the host's port 3001
+    depends_on:
+      - api # Specifies that the 'frontend' service depends on the 'api' service
+   
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

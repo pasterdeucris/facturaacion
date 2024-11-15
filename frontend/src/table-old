@@ -1,0 +1,39 @@
+<table style={{ width: '60px', fontSize: '1.5px' }}>
+				<thead style={{ borderTop: '0.5px dashed', borderBottom: '0.5px dashed' }}>
+					<tr>
+						<th>Cant</th>
+						<th>Descripción</th>
+						<th>Unida</th>
+						{/* <th>Total</th> */}
+						<th>IVA</th>
+					</tr>
+				</thead>
+				<tbody style={{ borderBottom: '0.5px dashed', height: 'auto' }}>
+					{
+						allProducts.length ? allProducts.map((item, index) => (
+							<tr key={index}>
+								<td style={{ paddingBottom: '5px' }}>
+									<span>
+										{item.producto_id}
+									</span>
+									<br />
+									<span>
+										{Number(item.cantidad).toFixed(2)}
+									</span>
+								</td>
+								<td style={{ letterSpacing: '0.5px', paddingBottom: '5px'  }}>
+									{item.descripcion.slice(0, 20)}
+									{item.descripcion.length > 20 ? '...' : ''}
+									<br />
+									<strong>
+										{item.parcial < 1000000 ? parseFloat(item.parcial).toFixed(2) : ""}
+									</strong>
+								</td>
+								<td style={{ paddingBottom: '5px', }}>{item.unitario < 1000000 ? item.unitario : ""}</td>
+								{/* <td>{item.parcial < 1000000 ? item.parcial : ""}</td> */}
+								<td style={{ paddingBottom: '5px', }}>{item.impuesto_producto}</td>
+							</tr>
+						)) : null
+					}
+				</tbody>
+			</table>

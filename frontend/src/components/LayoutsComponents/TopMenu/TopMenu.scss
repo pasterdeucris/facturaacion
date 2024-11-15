@@ -1,0 +1,29 @@
+.top-menu{
+    display: flex;
+
+    button {
+      color: #fff;
+  
+      &:hover {
+        color: violet;
+      }
+      &:focus,&:active {
+        color: #fff;
+      }
+    }
+  
+    &__left {
+      svg {
+        font-size: 17px;
+      }
+    }
+  
+    &__right {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .ant-layout-header {
+    padding: 0px 0px;
+  }

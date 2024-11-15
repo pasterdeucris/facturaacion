@@ -1,0 +1,18 @@
+.cierres {
+    margin-top: 2em;
+    
+    .cierre {
+        display: flex;
+        font-size: 16px;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 1em;
+        padding-right: 1em;
+        border-left: 1px solid #333;
+
+        .cierre-valor {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

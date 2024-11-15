@@ -1,0 +1,24 @@
+.table-entries {
+    width: 100%;
+    margin: 2em 0;
+
+    tbody {
+        text-align: center;
+        font-weight: 700;
+
+        td {
+            padding: 0.5em 0;
+        }
+    }
+}
+
+.button-danger-entry{
+    background-color: #dc3545;
+    border-color: #dc3545;
+    padding-bottom: 1.5em;
+
+    &:hover {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+}

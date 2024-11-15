@@ -1,0 +1,19 @@
+.side-menu {
+    overflow: auto;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    // top: 64px;
+
+    .ant-avatar {
+        display: flex;
+        align-items: center;
+        margin: 1em auto;
+    }
+
+    &__title-text {
+        text-align: center;
+        font-size: 18px;
+        color: #FFF;
+    }
+}

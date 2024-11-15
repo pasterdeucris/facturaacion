@@ -1,0 +1,15 @@
+.list {
+    &__searchable {
+        margin: 1.2em 0;
+    }
+
+    .button-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    .button-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+    }
+}

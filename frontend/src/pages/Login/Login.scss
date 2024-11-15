@@ -1,0 +1,32 @@
+.login {
+    background: url('../../assets/fondo.jpg');
+    background-size: cover;
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      
+      &-logo {
+        padding-top: 1.5em;
+        img {
+          width: 100%;
+        }
+      }
+  
+      &-form {
+        margin-top: 2em;
+        background-color: #fff;
+        opacity: 0.9;
+        width: 28em;
+        padding: 3em 4em;
+        border-radius: 0.5em;
+      }
+
+      &-nice {
+        padding-top: 2em;
+        width: 27.5em;
+        border-radius: 0.8em;
+      }
+    }
+  }

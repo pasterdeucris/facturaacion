@@ -1,0 +1,35 @@
+.td__normal {
+    width: 100%;
+    border: 1px solid;
+    border-radius: 0.2em;
+    padding: 0.2em 0.5em;
+}
+
+.td__number {
+    width: 100%;
+    border: 1px solid;
+    border-radius: 0.2em;
+    padding: 0.2em 0.5em;
+}
+
+
+.td__barcode {
+    width: 60px;
+    border: 1px solid;
+    border-radius: 0.2em;
+    padding: 0.2em 0.5em;
+}
+
+.ant-table-thead > tr > th, .ant-table-tbody > tr > td, .ant-table tfoot > tr > th, .ant-table tfoot > tr > td {
+    padding: 16px 15px;
+}
+
+.button-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    padding: 4px 10px !important;
+}
+
+.dd {
+    display: none;
+}

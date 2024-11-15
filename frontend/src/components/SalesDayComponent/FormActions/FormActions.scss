@@ -1,0 +1,18 @@
+.form-actions-entries {
+    margin: 2em auto;
+    display: flex;
+    justify-content: center;
+
+    .ant-form-item-control-input-content {
+        margin-bottom: 1em;
+    }
+
+    .text-small {
+        font-size: 4px;
+    }
+}
+
+.ant-select-item-option-active {
+    background-color: #dfe7eb !important;
+    font-weight: 700;
+}

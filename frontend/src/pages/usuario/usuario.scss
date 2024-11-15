@@ -1,0 +1,13 @@
+.usuario {
+    display: flex;
+    justify-content: space-between;
+
+    .button-gp-users {
+        display: flex;
+        justify-content: end;
+
+        button {
+            margin: 0 0.2em;
+        }
+    }
+}

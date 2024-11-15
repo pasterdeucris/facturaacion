@@ -1,0 +1,68 @@
+.report-invoice {
+    display: grid;
+
+    .container-report-invoice {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+    
+        .grid-1 {
+            grid-column-start: 1;
+            grid-column-end: 2; 
+    
+            text-align: center;
+    
+            .post-img {
+                text-align: left;
+            }
+        }
+    
+        .grid-2 {
+            grid-column-start: 2;
+            grid-column-end: 3; 
+    
+            text-align: center;
+        }
+    }
+
+    .container-report-table {
+        margin-top: 2em;
+    }
+
+    .report-prices {
+        margin-top: 2em;
+    }
+}
+
+.table-invoice {
+    width: 100%;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    font-weight: 600;
+}
+
+.body-table-invoice {
+    tr {
+        text-align: center;
+        margin-bottom: 0.5em;
+        border-bottom: 1px solid #333;
+    }
+}
+
+.font-i-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.font-i-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.upper {
+    text-transform: uppercase;
+}

@@ -1,0 +1,43 @@
+.signin-form {
+  text-align: center;
+
+  &__title {
+    margin-bottom: 2em;
+  }
+
+  .ant-form-item {
+    &:nth-child(3),
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  &__input {
+    .ant-input-prefix {
+      i {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .ant-input-affix-wrapper > input.ant-input {
+    padding: 0.5em;
+  }
+
+  &__form-button {
+    margin-top: 2em;
+    width: 15em;
+    font-size: 16px;
+    border-radius: 0.2em;
+
+    .ant-spin-dot-item{
+      background-color: #fff;
+    }
+  }
+
+  &__links {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+  }
+}
